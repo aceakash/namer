@@ -1,5 +1,10 @@
 package main
 
+import (
+	"math/rand"
+	"time"
+)
+
 var nouns = [...]string{
 	"account",
 	"achiever",
@@ -878,4 +883,10 @@ var nouns = [...]string{
 	"zinc",
 	"zipper",
 	"zoo",
+}
+
+func getRandomNoun() string {
+	randSource := rand.NewSource(time.Now().UnixNano())
+	random := rand.New(randSource)
+	return nouns[random.Int31n(int32(len(nouns)))]
 }

@@ -1,5 +1,10 @@
 package main
 
+import (
+	"math/rand"
+	"time"
+)
+
 var adjectives = [...]string{
 	"aback",
 	"abaft",
@@ -1329,4 +1334,10 @@ var adjectives = [...]string{
 	"zesty",
 	"zippy",
 	"zonked",
+}
+
+func getRandomAdjective() string {
+	randSource := rand.NewSource(time.Now().UnixNano())
+	random := rand.New(randSource)
+	return adjectives[random.Int31n(int32(len(adjectives)))]
 }
