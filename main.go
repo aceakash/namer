@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+import "flag"
 
 func main() {
-	fmt.Printf("%s %s\n", getRandomAdjective(), getRandomNoun())
+	n := flag.Int("n", 3, "Number of words")
+	flag.Parse()
+	randomAdjectives := getRandomAdjectives(*n - 1)
+	randomNoun := getRandomNoun()
+	fmt.Printf("%v %s\n", strings.Join(randomAdjectives, " "), randomNoun)
 }

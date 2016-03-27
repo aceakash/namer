@@ -1336,6 +1336,14 @@ var adjectives = [...]string{
 	"zonked",
 }
 
+func getRandomAdjectives(n int) []string {
+	randomAdjectives := make([]string, n, n)
+	for i := 0; i < n; i++ {
+		randomAdjectives[i] = getRandomAdjective()
+	}
+	return randomAdjectives
+}
+
 func getRandomAdjective() string {
 	randSource := rand.NewSource(time.Now().UnixNano())
 	random := rand.New(randSource)
