@@ -8,8 +8,9 @@ import "flag"
 
 func main() {
 	n := flag.Int("n", 3, "Number of words")
+	s := flag.String("s", " ", "Separator")
 	flag.Parse()
 	randomAdjectives := getRandomAdjectives(*n - 1)
 	randomNoun := getRandomNoun()
-	fmt.Printf("%v %s\n", strings.Join(randomAdjectives, " "), randomNoun)
+	fmt.Printf("%v%s%s\n", strings.Join(randomAdjectives, *s), *s, randomNoun)
 }
