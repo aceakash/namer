@@ -1,11 +1,11 @@
-package main
+package lib
 
 import (
 	"math/rand"
 	"time"
 )
 
-var nouns = [...]string{
+var nouns = []string{
 	"account",
 	"achiever",
 	"acoustics",

@@ -1,11 +1,11 @@
-package main
+package lib
 
 import (
 	"math/rand"
 	"time"
 )
 
-var adjectives = [...]string{
+var adjectives = []string{
 	"aback",
 	"abaft",
 	"abandoned",

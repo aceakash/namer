@@ -8,15 +8,12 @@ Only usable as a command-line tool for now. Programmatic access coming soon...
 
 Go 1.3+ installed, with $GOPATH set
 
-## Build
+## Install
 ```
 go get github.com/aceakash/name-it
-cd $GOPATH/src/github.com/aceakash/name-it
-./build.sh
 ```
 
-## Usage
-
+## Command-Line Usage
 ```
 name-it             # synonymous filthy sheep
 name-it -n 4        # black decorous flying thought
@@ -29,3 +26,23 @@ If you haven't guessed it by now, `name-it` takes two optional arguments:
 
 * *-n [number]* : how many words to generate (default 3)
 * *-s [separator]* : what separator to use between words (default " ")
+
+## Programmatic Usage
+```
+package main
+
+import "fmt"
+import "github.com/aceakash/name-it/lib" // <--------- bring it in
+
+func main() {
+  name := lib.NameIt(7, "--") // <--------- use it
+  fmt.Println(name.Name)
+  fmt.Println(name.Words)
+}
+```
+
+## Build
+```
+cd $GOPATH/src/github.com/aceakash/name-it
+./build.sh
+```
