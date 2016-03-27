@@ -12,5 +12,5 @@ func main() {
 	flag.Parse()
 	randomAdjectives := getRandomAdjectives(*n - 1)
 	randomNoun := getRandomNoun()
-	fmt.Printf("%v%s%s\n", strings.Join(randomAdjectives, *s), *s, randomNoun)
+	fmt.Printf("%s%s%s\n", strings.Join(randomAdjectives, *s), *s, randomNoun)
 }
