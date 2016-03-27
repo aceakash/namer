@@ -1,8 +1,6 @@
 # name-it
 
-Generate a random, colourful name like "invincible miscreant cheese" or "whimsical habitual gnarly cat"
-
-Only usable as a command-line tool for now. Programmatic access coming soon...
+Generate a random, colourful name like "invincible miscreant cheese" or "whimsical habitual gnarly cat". 
 
 ## Pre-requisites
 
