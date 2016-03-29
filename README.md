@@ -1,6 +1,6 @@
-# name-it
+# namer
 
-Generate a random, colourful name like "invincible miscreant cheese" or "whimsical habitual gnarly cat". 
+Generate a random, colourful name like "invincible miscreant cheese" or "whimsical habitual gnarly cat".
 
 ## Pre-requisites
 
@@ -8,19 +8,19 @@ Go 1.3+ installed, with $GOPATH set
 
 ## Install
 ```
-go get github.com/aceakash/name-it
+go get github.com/aceakash/namer/...
 ```
 
 ## Command-Line Usage
 ```
-name-it             # synonymous filthy sheep
-name-it -n 4        # black decorous flying thought
-name-it -n 7        # spiritual lackadaisical sweltering animated panicky illustrious plastic
-name-it -n 2 -s _   # tremendous_cemetery
-name-it -n 4 -s --  # berserk--repulsive--stingy--trucks
+nameit             # synonymous filthy sheep
+nameit -n 4        # black decorous flying thought
+nameit -n 7        # spiritual lackadaisical sweltering animated panicky illustrious plastic
+nameit -n 2 -s _   # tremendous_cemetery
+nameit -n 4 -s --  # berserk--repulsive--stingy--trucks
 ```
 
-If you haven't guessed it by now, `name-it` takes two optional arguments:
+If you haven't guessed it by now, `nameit` takes two optional arguments:
 
 * *-n [number]* : how many words to generate (default 3)
 * *-s [separator]* : what separator to use between words (default " ")
@@ -30,10 +30,10 @@ If you haven't guessed it by now, `name-it` takes two optional arguments:
 package main
 
 import "fmt"
-import "github.com/aceakash/name-it/lib" // <--------- bring it in
+import "github.com/aceakash/namer" // <--------- bring it in
 
 func main() {
-  name := lib.NameIt(7, "--") // <--------- use it
+  name := namer.NameIt(7, "--") // <--------- use it
   fmt.Println(name.Name)
   fmt.Println(name.Words)
 }
@@ -41,6 +41,6 @@ func main() {
 
 ## Build
 ```
-cd $GOPATH/src/github.com/aceakash/name-it
+cd $GOPATH/src/github.com/aceakash/namer
 ./build.sh
 ```
