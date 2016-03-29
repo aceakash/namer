@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/aceakash/name-it/lib"
+	"github.com/aceakash/namer"
 )
 import "flag"
 
@@ -12,6 +12,6 @@ func main() {
 	s := flag.String("s", " ", "Separator")
 	flag.Parse()
 
-	name := lib.NameIt(*n, *s)
+	name := namer.NameIt(*n, *s)
 	fmt.Println(name.Name)
 }
