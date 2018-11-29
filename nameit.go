@@ -1,3 +1,4 @@
+// Package namer provides a function 'NameIt' that generates unique names
 package namer
 
 import "strings"
